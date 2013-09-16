@@ -1,0 +1,77 @@
+GCD mocktail
+The Rebel Alliance and the Galactic Empire are engaged in an epic battle in the skies above Endor. The grand setup has d-dimensional board with each dimension of length ¡®N¡¯, (i.e) N x N¡­ (d times). Each cell (i1, i2, ¡­id) has the gcd (i1, i2, ¡­id) written on it.
+
+Now, the game begins. A random integer L is chosen and the first person to sum up the Lth power of each number modulo 30000001 wins the game.
+
+Rebel Alliance needs some help and pings you. If they win, you get a million dollars for it. Can you help?
+
+Input Format
+
+There are several test cases. The first line contains the number of test cases T. Then T test cases follow. Each test case is given in the following format.
+N and d are given in the first Line.
+Q is given in the second line.
+Each of the next Q lines contain an integer L.
+
+Constraints
+
+0<=T<=10
+1<=N<=107
+1<=d<=1000
+0<=L<=100
+0<=Q<=50
+
+Output Format
+
+For each test case, output Q lines, indicating the answer.
+
+Sample Input
+
+3
+3 2
+4
+0
+1
+2
+3
+5 1
+3
+0
+1
+2
+6 3
+2
+2
+3
+Sample Output
+
+9
+12
+20
+42
+5
+15
+55
+421
+975
+Explanation
+
+Test case1:
+the board is as follows:
+
+1(gcd 1,1) 1(gcd 1,2) 1(gcd 1,3)
+1(gcd 2,1) 2(gcd 2,2) 1(gcd 2,3)
+1(gcd 3,1) 1(gcd 3,2) 3(gcd 3,3)
+
+Therefore, sum of 0th power is 1^0+1^0+1^0 + 1^0+2^0+1^0 + 1^0+1^0+3^0 = 9
+sum of 1st power is 1^1+1^1+1^1 + 1^1+2^1+1^1 + 1^1+1^1+3^1 = 12
+so on ¡­
+
+Test case2:
+the board is as follows:
+
+1(gcd 1) 2(gcd 2) 3(gcd 3) 4(gcd 4) 5(gcd 5)
+
+Therefore,
+sum of 0th power is 1^0+2^0+3^0+4^0+5^0 = 5
+sum of 1st power is 1^1+2^1+3^1+4^1+5^1 = 15
+so on ¡­
